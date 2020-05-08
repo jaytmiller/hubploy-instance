@@ -3,6 +3,11 @@ jupyterhub:
     memory:
       guarantee: 512M
       limit: 1G
+  hub:
+    extraConfig:
+      jupyterlab: |
+        c.Spawner.cmd = ['jupyter-labhub']
   proxy:
     https:
       enabled: false
+  defaultUrl: "/lab"
