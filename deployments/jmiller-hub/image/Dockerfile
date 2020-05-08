@@ -47,7 +47,7 @@ RUN . $CONDA_DIR/etc/profile.d/conda.sh && \
     # S3-enabled release of CRDS:
     pip install --upgrade git+https://github.com/spacetelescope/crds.git@7.4.1.4#egg=crds[aws] && \
     # Needed to use this environment as a kernel
-    pip install ipykernel
+    pip install ipykernel && notebook==5.7.8 nbgitpuller==0.7.2 nbresuse==0.3.2
 
 # Create hstdp notebook kernel
 RUN mkdir -p /usr/local/share/jupyter/kernels/hstdp
